@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Read Matchups · NBA Matchups</title>
+<meta name="description" content="What every number on the NBA matchup pages means and how to use it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap">
+<link rel="stylesheet" href="style.css?v=202611172030">
+<link rel="stylesheet" href="nba.css?v=202611172030">
+</head>
+<body data-page="read">
+<header class="topbar">
+  <h1><a href="index.html" class="home-link">NBA Matchups</a></h1>
+  <nav class="topnav no-print">
+    <a href="index.html"><span class="nav-full">Tonight's Matchups</span><span class="nav-short">Tonight</span></a>
+    <a href="ratings.html"><span class="nav-full">Team Ratings</span><span class="nav-short">Ratings</span></a>
+    <a href="compare.html"><span class="nav-full">Compare Any Two Teams</span><span class="nav-short">Compare</span></a>
+    <a href="how-to-read.html" class="active"><span class="nav-full">How to Read Matchups</span><span class="nav-short">How to Read</span></a>
+  </nav>
+  <a href="/" class="league-link no-print">All boards</a>
+</header>
+
+<main id="app" class="prose">
+  <section class="week-head"><div><h2 class="week-title">How to Read Matchups</h2></div></section>
+
+  <p>Basketball is scored by possessions, so the pages measure teams per 100 possessions as well as per game. A fast team scores more per game without being better; per 100 possessions takes pace out.</p>
+
+  <h3>The board</h3>
+  <ul>
+    <li><b>Spread and total</b> are ESPN's current line, loaded in your browser. "Opened" shows the first line the site saw that day when it has moved half a point or more.</li>
+    <li><b>Implied score</b> splits the total by the spread: the favorite gets half the total plus half the spread.</li>
+    <li><b>B2B</b> marks a team on the second night of a back-to-back. <b>3d rest</b> marks a team with three or more days off.</li>
+    <li><b>Net</b> under each team is its adjusted net rating: points per 100 possessions better than its opponents, adjusted for schedule and home court.</li>
+  </ul>
+
+  <h3>The game header</h3>
+  <p>The line, total and implied score, then the rest spot (days off for each team and games in the last seven days) and altitude for games in Denver and Utah. Tired legs and thin air both show up late in games.</p>
+
+  <h3>Head to Head</h3>
+  <p>Each offense against the other defense, stat by stat, with league ranks. The longer bar has the better rank. A bar turns team color only when that side is at least one league standard deviation better, so a colored bar is a real gap, not a few rank spots.</p>
+  <ul>
+    <li><b>Adj. rating / 100</b>: points scored (offense) or allowed (defense) per 100 possessions, adjusted for opponents and home court. The best single number for team strength.</li>
+    <li><b>The Four Factors</b> explain why a team scores. <b>eFG%</b> is shooting, counting a three as 1.5 makes. <b>Turnover %</b> is turnovers per 100 possessions. <b>Offensive rebound %</b> is the share of its own misses a team gets back, faced with the defense's <b>defensive rebound %</b>. <b>FT rate</b> is free throw attempts per 100 shots.</li>
+    <li><b>Shooting</b>: how many shots are threes (3PA rate), how many go in, and paint points. A defense that gives up threes against a team that lives on them is a matchup to watch.</li>
+  </ul>
+
+  <h3>Team cards</h3>
+  <ul>
+    <li><b>SRS</b> (Simple Rating System) is points better than an average team on a neutral floor. <b>OSRS</b> and <b>DSRS</b> split it into offense and defense. <b>SoS</b> is how strong the schedule has been, in points.</li>
+    <li><b>Players</b> are the top ten by minutes, per game. <b>PRA</b> is points plus rebounds plus assists. <b>Last 5 pts</b> shows recent form. "Out last game" marks a player listed out (not a coach's decision) in the team's last game. Click a name for the last 15 games.</li>
+    <li><b>Defense vs guards, forwards and centers</b> is what opponents at each position have scored per game against this team (ESPN's position labels), ranked 1 for the fewest points allowed.</li>
+  </ul>
+
+  <h3>Limits</h3>
+  <p>Early in the season every number moves a lot; the adjusted ratings lean toward average until there are enough games. Injury reports are not on the site yet, so check who is out before tip-off.</p>
+</main>
+
+<footer class="no-print">
+  <p>Stats from <a href="https://github.com/sportsdataverse/hoopR-nba-data" rel="noopener">sportsdataverse's hoopR data</a>. Live scores and lines: ESPN.</p>
+</footer>
+</body>
+</html>

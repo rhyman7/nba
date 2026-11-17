@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NBA Matchups</title>
+<meta name="description" content="Every NBA game tonight on one board: spreads, totals, implied scores and rest, with a full offense-vs-defense breakdown of each matchup.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NBA Matchups">
+<meta property="og:title" content="NBA Matchups">
+<meta property="og:description" content="Every NBA game tonight on one board: spreads, totals, implied scores and rest, with a full offense-vs-defense breakdown of each matchup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap">
+<link rel="stylesheet" href="style.css?v=202611172030">
+<link rel="stylesheet" href="nba.css?v=202611172030">
+</head>
+<body data-page="week">
+<header class="topbar">
+  <h1><a href="index.html" class="home-link">NBA Matchups</a></h1>
+  <nav class="topnav no-print">
+    <a href="index.html" class="active"><span class="nav-full">Tonight's Matchups</span><span class="nav-short">Tonight</span></a>
+    <a href="ratings.html"><span class="nav-full">Team Ratings</span><span class="nav-short">Ratings</span></a>
+    <a href="compare.html"><span class="nav-full">Compare Any Two Teams</span><span class="nav-short">Compare</span></a>
+    <a href="how-to-read.html"><span class="nav-full">How to Read Matchups</span><span class="nav-short">How to Read</span></a>
+  </nav>
+  <a href="/" class="league-link no-print">All boards</a>
+</header>
+
+<main id="app">
+  <section class="week-head">
+    <div>
+      <h2 id="weekTitle" class="week-title">Tonight's Matchups</h2>
+      <p id="weekSub" class="week-sub"></p>
+    </div>
+    <div class="week-filters">
+      <input id="teamSearch" type="search" placeholder="Find a team" aria-label="Find a team">
+      <select id="confFilter" aria-label="Conference or division"></select>
+    </div>
+  </section>
+  <div id="gameList"><div class="empty-note">Loading games...</div></div>
+</main>
+
+<footer class="no-print">
+  <p>Stats cover the current NBA regular season through the latest finished games, from <a href="https://github.com/sportsdataverse/hoopR-nba-data" rel="noopener">sportsdataverse's hoopR data</a>. Ranks are out of 30 teams. Live scores and lines: ESPN.</p>
+</footer>
+
+<script src="teamcolors.js?v=202611172030"></script>
+<script src="common.js?v=202611172030"></script>
+<script src="live.js?v=202611172030"></script>
+<script src="matchups.js?v=202611172030"></script>
+</body>
+</html>

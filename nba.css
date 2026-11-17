@@ -1,0 +1,67 @@
+/* NBA additions on top of style.css (shared with the NFL and CFB sites). */
+
+/* one player table across the card instead of three */
+.tables-row.nba-tables { grid-template-columns: minmax(0, 1fr); }
+.th-note { font-weight: 400; font-size: 0.78rem; color: var(--text-dim); margin-left: 6px; }
+.rec-sub { display: block; font-weight: 400; font-size: 0.8125rem; color: var(--text-dim); margin-top: 2px; }
+.defpos-row.nba-defpos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.nba-defpos .defpos-stats { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.inj { background: var(--neg-bg); color: #fca5a5; }
+
+/* rest tags on the board */
+.rest-tag {
+  display: inline-block; margin-left: 4px; padding: 1px 5px; border-radius: 4px;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; vertical-align: 1px;
+}
+.rest-tag.b2b { background: var(--neg-bg); color: #fca5a5; }
+.rest-tag.rested { background: var(--good-bg); color: #86efac; }
+
+/* last 10 games on the team card */
+.recent { margin-top: 18px; }
+.recent h4 { margin: 0 0 6px 8px; font-size: 0.9375rem; font-weight: 600; }
+.recent-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.rg { padding: 4px 8px; border-radius: 6px; background: var(--panel-alt); font-size: 0.8125rem; color: var(--text-dim); }
+.rg b { font-weight: 600; margin-left: 2px; }
+.rg.pos b { color: var(--good); }
+.rg.neg b { color: var(--neg); }
+
+/* player game log */
+.log-back {
+  position: fixed; inset: 0; z-index: 50; background: rgba(0, 0, 0, 0.55);
+  display: flex; align-items: flex-start; justify-content: center; padding: 6vh 16px; overflow-y: auto;
+}
+.log-panel {
+  width: min(760px, 100%); background: var(--panel); border: 1px solid var(--border);
+  border-top: 4px solid var(--tc); border-radius: var(--radius); padding: 16px 18px;
+}
+.log-head { display: flex; align-items: center; gap: 10px; }
+.log-head h3 { margin: 0; font-size: 1.125rem; flex: 1; }
+.log-close { background: none; border: 0; color: var(--text-dim); font-size: 1.5rem; cursor: pointer; line-height: 1; padding: 4px 8px; }
+.log-close:hover { color: var(--text); }
+.log-sub { color: var(--text-dim); margin: 8px 0 10px; font-size: 0.875rem; }
+.log-scroll { overflow-x: auto; }
+
+/* ratings table */
+.ratings-wrap { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px; }
+.ratings-table th.sortable { cursor: pointer; user-select: none; }
+.ratings-table th.sorted { color: var(--text); }
+.ratings-table a { color: inherit; text-decoration: none; }
+.ratings-table a:hover { text-decoration: underline; }
+
+/* compare page pickers */
+.compare-pick { align-items: center; }
+.vs-word { color: var(--text-dim); }
+
+/* how to read */
+.prose { max-width: 760px; }
+.prose h3 { margin: 26px 0 8px; font-size: 1.0625rem; }
+.prose p, .prose li { color: var(--text); line-height: 1.55; }
+.prose li { margin-bottom: 6px; }
+
+@media (max-width: 760px) {
+  .defpos-row.nba-defpos { grid-template-columns: minmax(0, 1fr); }
+}
+@media print {
+  .log-back { display: none; }
+  .rest-tag, .rg { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

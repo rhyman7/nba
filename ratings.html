@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Ratings · NBA Matchups</title>
+<meta name="description" content="Every NBA team's adjusted offensive and defensive ratings, net rating, SRS, pace and Four Factors in one sortable table.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NBA Matchups">
+<meta property="og:title" content="Team Ratings · NBA Matchups">
+<meta property="og:description" content="Every NBA team's adjusted offensive and defensive ratings, net rating, SRS, pace and Four Factors in one sortable table.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap">
+<link rel="stylesheet" href="style.css?v=202611172030">
+<link rel="stylesheet" href="nba.css?v=202611172030">
+</head>
+<body data-page="ratings">
+<header class="topbar">
+  <h1><a href="index.html" class="home-link">NBA Matchups</a></h1>
+  <nav class="topnav no-print">
+    <a href="index.html"><span class="nav-full">Tonight's Matchups</span><span class="nav-short">Tonight</span></a>
+    <a href="ratings.html" class="active"><span class="nav-full">Team Ratings</span><span class="nav-short">Ratings</span></a>
+    <a href="compare.html"><span class="nav-full">Compare Any Two Teams</span><span class="nav-short">Compare</span></a>
+    <a href="how-to-read.html"><span class="nav-full">How to Read Matchups</span><span class="nav-short">How to Read</span></a>
+  </nav>
+  <a href="/" class="league-link no-print">All boards</a>
+</header>
+
+<main id="app">
+  <section class="week-head">
+    <div>
+      <h2 class="week-title">Team Ratings</h2>
+      <p id="ratingsSub" class="week-sub"></p>
+    </div>
+  </section>
+  <div id="ratingsTable" class="ratings-wrap"><div class="empty-note">Loading...</div></div>
+  <p class="edge-key">Click a column to sort. Adj. off and Adj. def are points scored and allowed per 100 possessions, adjusted for the opponents each team has faced and for home court (a ridge regression over every game, the same method as the football EPA ratings). Adj. net is the difference. Net is the raw version. SRS is the same idea in points per game: how many points better than an average team on a neutral floor. SoS is the strength of schedule in points. The last eight columns are the Four Factors on offense and defense.</p>
+</main>
+
+<footer class="no-print">
+  <p>Stats cover the current NBA regular season through the latest finished games, from <a href="https://github.com/sportsdataverse/hoopR-nba-data" rel="noopener">sportsdataverse's hoopR data</a>. Ranks are out of 30 teams. Live scores and lines: ESPN.</p>
+</footer>
+
+<script src="teamcolors.js?v=202611172030"></script>
+<script src="common.js?v=202611172030"></script>
+<script src="ratings.js?v=202611172030"></script>
+</body>
+</html>
