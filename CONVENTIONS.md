@@ -20,3 +20,8 @@ convention changes. The rules follow the NFL and CFB dashboards'.
 2. Serve the folder (`python -m http.server`) and load `index.html`, one `matchup.html?game=<id>`,
    `ratings.html`, `compare.html` and `how-to-read.html` headlessly at 1280 and 390 wide: no page
    errors (failed requests to ESPN are fine when ESPN is unreachable) and no sideways scrolling.
+
+- **Site bar (Nov 26, 2026).** Every page loads the Weekly Gridiron Board's site bar as the first
+  thing in `<body>`: `<script src="/site-bar.js" data-shell="2"></script>`. The script lives in
+  rhyman7/rhyman7.github.io; change the bar there. It marks Basketball as the current section and
+  gives the pages the Back arrow inside the home-screen app. A new page needs the same line.
