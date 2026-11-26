@@ -25,3 +25,8 @@ convention changes. The rules follow the NFL and CFB dashboards'.
   thing in `<body>`: `<script src="/site-bar.js" data-shell="2"></script>`. The script lives in
   rhyman7/rhyman7.github.io; change the bar there. It marks Basketball as the current section and
   gives the pages the Back arrow inside the home-screen app. A new page needs the same line.
+
+- **One site (Nov 26, 2026).** With the shared bar on (`html.wgb-shell-on`), the page's own menu
+  (`.topnav > a`) and "All boards" are hidden: the bar's second row lists this league's pages and
+  the College/NBA switch (`HOOPS` in rhyman7.github.io's `site-bar.js`). They stay in the markup as
+  the fallback when the bar script does not load. A new page is added to both.

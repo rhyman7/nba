@@ -65,3 +65,9 @@
   .log-back { display: none; }
   .rest-tag, .rg { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+/* One site (Nov 26, 2026): with the shared two-row bar on (html.wgb-shell-on, set by
+   /site-bar.js) the page's own menu and "All boards" are not shown; the bar's second row lists
+   this league's pages. They stay as the fallback when the bar script does not load. */
+html.wgb-shell-on .topnav > a, html.wgb-shell-on .league-link { display: none; }
+html.wgb-shell-on .topnav { min-height: 0; }
